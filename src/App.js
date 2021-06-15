@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import { useState } from 'react'
+import { Switch, Route, useHistory, withRouter } from 'react-router-dom'
+import { Home, Dashboard } from './containers'
 import './App.css';
 
 function App() {
+  const history = useHistory()
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  })
+
+  const handleInput = (e) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const redirect = () => {
+    localStorage.setItem('user', JSON.stringify(user))
+
+    history.push('/dashboard')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path='/'>
+        <Home handleInput={handleInput} redirect={redirect} />
+      </Route>
+      <Route exact path='/dashboard'>
+        <Dashboard />
+      </Route>
+    </Switch>
   );
 }
 
-export default App;
+export default withRouter(App);
