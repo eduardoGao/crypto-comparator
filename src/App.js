@@ -29,9 +29,8 @@ function App() {
       <Route exact path='/'>
         <Home handleInput={handleInput} redirect={redirect} />
       </Route>
-      <Route exact path='/dashboard'>
-        <Dashboard />
-      </Route>
+      <Route exact path='/dashboard' component={Dashboard} />
+
     </Switch>
   );
 }
