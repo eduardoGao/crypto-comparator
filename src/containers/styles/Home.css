@@ -1,0 +1,44 @@
+.home {
+  height: 95vh;
+  display: grid;
+  place-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--main);
+  width: 340px;
+  padding: 2em;
+  border-radius: 8px;
+}
+
+.label {
+  display: block;
+  margin-bottom: .3em;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.home__input {
+  width: 90%;
+  border: none;
+  border-radius: 6px;
+  padding: .6em;
+  border: 1px solid var(--main);
+  margin-bottom: 1.3em;
+}
+
+.home__button {
+  width: 97%;
+  border: none;
+  background: var(--main);
+  padding: 1em 2em;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}

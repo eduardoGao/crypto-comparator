@@ -1,0 +1,18 @@
+.cryptoCard {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1em;
+  width: 250px;
+  transition: .4s;
+}
+
+.cryptoCard:hover {
+  transform: scale(1.1);
+  transition: .4s;
+}
+.cryptoCard__title {
+  color: var(--main);
+  margin: .7em 0 ;
+}
+.cryptoCard__price {}

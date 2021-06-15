@@ -1,0 +1,23 @@
+.header {
+  /* background: red; */
+  width: 900px;
+  margin: 4em auto;
+  text-align: center;
+}
+
+.header__title {
+  color: white;
+  font-size: 2em;
+  background: var(--main);
+  width: fit-content;
+  margin: auto;
+  padding: .5em 1em;
+  border-radius: 16px;
+}
+a {
+  text-decoration: none;
+}
+
+.header__user {
+  font-size: 1.2em;
+}

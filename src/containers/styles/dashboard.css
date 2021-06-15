@@ -1,0 +1,7 @@
+.dash__cards {
+  width: 900px;
+  margin: 3em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

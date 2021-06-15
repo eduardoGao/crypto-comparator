@@ -1,7 +1,11 @@
 import Home from './Home'
-import Dashboard from './Dashboard'
+import DashboardBtc from './DashboardBtc'
+import DashboardEth from './DashboardEth'
+import DashboardXrp from './DashboardXrp'
 
 export {
   Home,
-  Dashboard
+  DashboardBtc,
+  DashboardEth,
+  DashboardXrp
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Switch, Route, useHistory, withRouter } from 'react-router-dom'
-import { Home, Dashboard } from './containers'
+import { Home, DashboardBtc, DashboardEth, DashboardXrp } from './containers'
 import './App.css';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   const redirect = () => {
     localStorage.setItem('user', JSON.stringify(user))
 
-    history.push('/dashboard')
+    history.push('/dashboard/bitcoin')
   }
 
   return (
@@ -29,7 +29,9 @@ function App() {
       <Route exact path='/'>
         <Home handleInput={handleInput} redirect={redirect} />
       </Route>
-      <Route exact path='/dashboard' component={Dashboard} />
+      <Route exact path='/dashboard/bitcoin' component={DashboardBtc} />
+      <Route exact path='/dashboard/ethereum' component={DashboardEth} />
+      <Route exact path='/dashboard/ripple' component={DashboardXrp} />
 
     </Switch>
   );
